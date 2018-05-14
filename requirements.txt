@@ -1,0 +1,7 @@
+django
+numpy
+scipy
+pandas
+mysqlclient
+scikit-learn
+keras
