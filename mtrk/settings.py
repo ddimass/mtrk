@@ -26,6 +26,9 @@ SECRET_KEY = 'd-y88f-sn-c)7750aq+__jv=_f)3q*k!@&_=g3%z@lq#us#+&s'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+INTERNAL_IPS = [
+'127.0.0.1',
+]
 
 
 # Application definition
@@ -39,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'results.apps.ResultsConfig',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE = [
@@ -49,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 ROOT_URLCONF = 'mtrk.urls'
@@ -123,3 +128,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
 STATIC_URL = '/static/'
+    
+lm_types = (
+  (0, 'Regresions'),
+  (1, 'Classification'),
+)
+lm_libs = (
+  (0, 'Scikit-learn'),
+  (1, 'Tensorflow'),
+  (2, 'Keras'),
+)
