@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',
     'results.apps.ResultsConfig',
+    'datasets.apps.DatasetsConfig',
     'debug_toolbar',
 ]
 
