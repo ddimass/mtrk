@@ -12,9 +12,4 @@ class Lm(models.Model):
   image = models.FileField(upload_to='uploads/%Y/%m/%d/')
   lm_type = models.IntegerField(choices=settings.lm_types)
   lm_lib = models.IntegerField(choices=settings.lm_libs)
-
-class Lm_param(models.Model)
-  lm = models.ForeignKey(Lm, on_delete=models.CASCADE)
-  lspeed = models.FloatField()
-  step_size = models.FloatField()
-  reg_fun_name = models.CharField(max_length=200)
+  attrs = models.JSONField()

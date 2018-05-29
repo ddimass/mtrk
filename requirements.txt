@@ -5,3 +5,4 @@ pandas
 mysqlclient
 scikit-learn
 keras
+django-debug-toolbar

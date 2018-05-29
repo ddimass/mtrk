@@ -61,7 +61,7 @@ ROOT_URLCONF = 'mtrk.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [ os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,7 +134,11 @@ lm_types = (
   (1, 'Classification'),
 )
 lm_libs = (
-  (0, 'Scikit-learn'),
-  (1, 'Tensorflow'),
-  (2, 'Keras'),
+    (0, 'Scikit-learn'),
+    (1, 'Tensorflow'),
+    (2, 'Keras'),
 )
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "mtrk", "static"),
+]

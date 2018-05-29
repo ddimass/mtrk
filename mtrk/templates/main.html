@@ -1,0 +1,29 @@
+{% load static %}
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Machine Learning Management System</title>
+        <link href="{% static "external/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static "external/font-awesome/css/font-awesome.min.css" %}"/>
+    	<link href="{% static "external/metisMenu/metisMenu.min.css" %}" rel="stylesheet">
+    	<link href="{% static "external/sb-admin/css/sb-admin-2.min.css" %}" rel="stylesheet">
+		<link href="{% static "external/morrisjs/morris.css" %}" rel="stylesheet">
+    </head>
+    <body>
+	{% include "header.html" %}
+	{% include "sidebar.html" %}
+	<div id="page-wrapper">
+    {% block content %}{% endblock content %}
+	</div>
+    {% include "footer.html" %}
+	<script src="{% static "external/jquery/jquery.min.js" %}"></script>
+	<script src="{% static "external/bootstrap/js/bootstrap.min.js" %}"></script>
+	<script src="{% static "external/metisMenu/metisMenu.min.js" %}"></script>
+	<script src="{% static "external/morrisjs/morris.min.js" %}"></script>
+	<script src="{% static "external/raphael/raphael.min.js" %}"></script>
+	<script src="{% static "external/sb-admin/js/sb-admin-2.js" %}"></script>
+    </body>
+</html>
