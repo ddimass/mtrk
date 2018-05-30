@@ -25,7 +25,7 @@ SECRET_KEY = 'd-y88f-sn-c)7750aq+__jv=_f)3q*k!@&_=g3%z@lq#us#+&s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 INTERNAL_IPS = [
 '127.0.0.1',
 ]
@@ -43,6 +43,9 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'results.apps.ResultsConfig',
     'datasets.apps.DatasetsConfig',
+    'lm.apps.LmConfig',
+    'lm_project.apps.LmProjectConfig',
+    'dashboard.apps.DashboardConfig',
     'debug_toolbar',
 ]
 

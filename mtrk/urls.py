@@ -23,6 +23,9 @@ urlpatterns = [
     path('polls/', include('polls.urls')),
     path('results/', include('results.urls')),
     path('datasets/', include('datasets.urls')),
+    path('lm_project/', include('lm_project.urls')),
+    path('lm/', include('lm.urls')),
+    path('', include('dashboard.urls')),
 ]
 
 if settings.DEBUG:
